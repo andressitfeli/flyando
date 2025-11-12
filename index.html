@@ -16,6 +16,26 @@
 
   gtag('config', 'AW-17709630352');
 </script>
+
+  <!-- Event snippet for Envío de formulario para clientes potenciales conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17709630352/d6DcCN20774bEJCHzvxB',
+      'value': 1.0,
+      'currency': 'COP',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+  
   <header class="site-header">
     <div class="container header-inner">
       <div class="logo">
